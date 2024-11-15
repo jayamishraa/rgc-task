@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import RoleSearch from '../components/RoleSearch';
 
 const RolePage = () => {
@@ -30,9 +30,9 @@ const RolePage = () => {
   };
 
   return (
-    <div className='p-5 ml-[19vw] w-[80vw]'>
-      <Header />
-      <div className='mt-[-390px] flex items-center'>
+    <div>
+      {/* <Header /> */}
+      <div className='flex items-center'>
         <h2>Role Assignment | </h2>
         <Link to='/singleuser' className='text-blue-500 hover:underline p-1'>
           Single User
@@ -80,6 +80,7 @@ const RolePage = () => {
           </tbody>
         </table>
       </div>
+      <Outlet />
     </div>
   );
 };

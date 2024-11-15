@@ -3,9 +3,8 @@ import { Outlet } from 'react-router';
 
 const Header = () => {
   return (
-    <div className='fixed right-4 rounded w-[78vw] mb-50 top-3 bg-[#245251] text-white text-center p-4'>
-      Header
-      
+    <div className='fixed rounded w-[75.5vw] top-3 bg-[#245251] text-white text-center mb-2 p-4'>
+      Header      
     </div>
   );
 }

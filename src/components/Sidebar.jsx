@@ -9,11 +9,14 @@ const Sidebar = () => {
     let testModule = ['test1', 'test2'];
 
     return (
-        <div className="w-[20vw] fixed h-full bg-[#245251] p-4">
+        <div className="w-[20vw] fixed h-screen z-10 bg-[#245251] p-4">
             <h1 className="mt-10 text-white text-2xl font-bold">Module</h1>
             <div className="mt-2">
                 <h2 className="mt-10 text-white">Master Module 
-                    {/* <button onClick={()=>setMasterModule(bool => !bool)}> v </button> */}
+                    <button 
+                        onClick={()=>setMasterModule(bool => !bool)}
+                        className='m-1'
+                    > v </button>
                 </h2>
                 <ul className="mt-2">
                     {ifMasterModule && masterModule.map((item, index) => (
@@ -24,8 +27,11 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="mt-6">
-                <h2 className="text-white">Test Module 
-                    {/* <button onClick={()=>setTestModule(bool => !bool)}> v </button> */}
+                <h2 className="text-white">Test Module
+                    <button 
+                        onClick={()=>setTestModule(bool => !bool)}
+                        className='m-1'
+                    > v </button>
                 </h2>
                 <ul className="mt-2">
                     {ifTestModule && testModule.map((item, index) => (
@@ -35,7 +41,6 @@ const Sidebar = () => {
                     ))}
                 </ul>
             </div>
-            <Outlet />
         </div>
     );
 }
